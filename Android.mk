@@ -28,7 +28,8 @@ ifneq ($(TARGET_USE_CUSTOM_SECOND_LUN_NUM),)
 common_cflags += -DCUSTOM_SECOND_LUN_NUM=$(TARGET_USE_CUSTOM_SECOND_LUN_NUM)
 endif
 
-common_cflags += -Werror
+common_cflags += -Werror \
+	-Wno-error=unused-parameter
 
 common_src_files := \
 	VolumeManager.cpp \
